@@ -1,0 +1,78 @@
+/* Amortization Section - Banker Theme */
+.amortization {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.amortization-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 60px;
+}
+
+.calculator-form {
+    background: #f8f9fa;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #FF6B35;
+}
+
+.calculator-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #FF6B35, #e55a2b);
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.calculator-result h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#monthly-payment {
+    color: #fff;
+    font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .amortization-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .calculator-form {
+        padding: 30px 20px;
+    }
+}
