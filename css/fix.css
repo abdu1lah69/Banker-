@@ -1,0 +1,50 @@
+/* ==== Mobile overflow hot-fixes ==== */
+* { box-sizing: border-box; }
+
+html, body {
+width: 100%;
+max-width: 100%;
+overflow-x: hidden; /* kill sideways scroll */
+}
+
+/* Never let containers exceed the viewport */
+.container, .container-fluid, header, footer, section {
+max-width: 100vw;
+width: 100%;
+}
+
+/* Bootstrap rows can cause overflow if outer gutters are large */
+.row { margin-left: 0; margin-right: 0; }
+
+/* Prevent content from forcing width */
+img, svg, video { max-width: 100%; height: auto; display: block; }
+[class*="col-"] { min-width: 0; } /* fixes long text/icon groups */
+
+/* Top info bar: allow wrap on narrow screens */
+.topbar .row,
+.topbar .d-flex { flex-wrap: wrap; }
+
+/* Social icons line: avoid pushing layout wider than 100% */
+.social, .social-icons, .header-social {
+display: flex;
+align-items: center;
+gap: .5rem;
+flex-wrap: nowrap;
+max-width: 100%;
+overflow: hidden;
+}
+
+/* Navbar: keep paddings inside the viewport */
+.navbar,
+.navbar .container { padding-right: 1rem; padding-left: 1rem; }
+.navbar-toggler { margin-right: 0; }
+
+/* Avoid the classic 100vw + padding bug on hero/strips */
+.hero, .fullwidth, .strip, .banner {
+width: 100%; /* not 100vw */
+overflow: hidden;
+}
+
+/* Headings & spacing scale better on phones */
+h1 { line-height: 1.15; font-size: clamp(2rem, 4.5vw, 3rem); }
+section { padding: clamp(2rem, 6vw, 5rem) 0; }
