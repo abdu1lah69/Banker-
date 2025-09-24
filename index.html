@@ -6,7 +6,7 @@
     <title>Banker - Banking & Finance HTML Template</title>
     
     <!-- CSS Files -->
-     <link rel="stylesheet" href="css/fix.css?v=2">
+    <link rel="stylesheet" href="css/fix.css?v=2">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/hero.css">
@@ -29,17 +29,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Top Social Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="top-bar-content">
-                <div class="top-bar-left">
-                    <span><i class="fas fa-phone"></i> +1 234 567 8900</span>
-                    <span><i class="fas fa-envelope"></i> info@banker.com</span>
-                </div>
-            </div>
-        </div>
-    </div>
+
+    <div class="top-bar"></div>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
@@ -285,6 +276,17 @@
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
+                </div><div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?ixlib=rb-4.0.3&w=600&h=400&fit=crop" alt="Gallery Image 5">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&w=600&h=400&fit=crop" alt="Gallery Image 6">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -429,10 +431,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-nav">
-                    <button class="prev-btn" id="prev-btn"><i class="fas fa-chevron-left"></i></button>
-                    <button class="next-btn" id="next-btn"><i class="fas fa-chevron-right"></i></button>
-                </div>
+        
             </div>
         </div>
     </section>
@@ -706,7 +705,24 @@
                             <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Send Message</button>
+                        
                     </form>
+                    <script>
+// wait until DOM is loaded
+document.addEventListener("DOMContentLoaded", function() {
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", function(event) {
+event.preventDefault(); // stops page reload
+
+// show success popup
+alert("✅ Your message has been sent successfully!");
+
+// clear form after submit
+form.reset();
+});
+});
+</script>
                 </div>
             </div>
         </div>
@@ -756,16 +772,13 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>Copyright ©2024 All rights reserved | This template is made with <i class="fas fa-heart"></i> by <a href="#">Colorlib</a></p>
+                <p>Copyright ©2024 All rights reserved | This template is made with <i class="fas fa-heart"></i> by Abdullah Aijaz for EzTech</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript Files -->
-    <script src="js/main.js"></script>
-    <script src="js/testimonials.js"></script>
     <script src="js/faq.js"></script>
-    <script src="js/gallery.js"></script>
     <script src="js/contact.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
